@@ -46,13 +46,6 @@
       }
       window.onload = () => {
         setupBookmarks();
-        getWeather();
-        // Set up the clock
-        document.getElementById("clock").innerHTML = getTime();
-        // Set clock interval to tick clock
-        setInterval(() => {
-          document.getElementById("clock").innerHTML = getTime();
-        }, 100);
       };
 
       document.addEventListener("keyup", (event) => {
