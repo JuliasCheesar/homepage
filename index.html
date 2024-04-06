@@ -10,23 +10,6 @@
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
   </head>
   <body>
-    <div id="search">
-      <input
-        id="search-field"
-        type="text"
-        name="search-field"
-        onkeypress="return search(event)"
-      />
-    </div>
-    <div class="container">
-      <div id="clock"></div>
-      <div class="weather-container">
-        <div class="row">
-          <div id="weather-description" class="inline"></div>
-          <div class="inline">-</div>
-          <div id="temp" class="inline"></div>
-        </div>
-      </div>
       <div id="bookmark-container"></div>
     </div>
 
@@ -60,17 +43,6 @@
           })
           .join("");
       }
-
-      window.onload = () => {
-        setupBookmarks();
-        getWeather();
-        // Set up the clock
-        document.getElementById("clock").innerHTML = getTime();
-        // Set clock interval to tick clock
-        setInterval(() => {
-          document.getElementById("clock").innerHTML = getTime();
-        }, 100);
-      };
 
       document.addEventListener("keyup", (event) => {
         if (event.keyCode == 32) {
